@@ -1,0 +1,184 @@
+@media (min-width:1025px){
+    
+header .navbar-collapse .navbar-nav{
+   
+    font-size: 13px;
+}
+.container{
+    max-width: 1300px;
+}
+}
+
+@media (max-width:1024px) {
+    .container{
+        max-width: 100%;
+    }
+    .navbar{
+        padding-left: 0;
+        padding-right: 0
+    }
+    header .navbar-collapse .navbar-nav{
+   
+        font-size: 12px;
+        text-align: center
+    }
+    .box{
+        height: auto;
+    }
+    .eventimage{
+        width: 80px;
+        margin-right: 0
+    }
+    .eventimage img{
+        width: 100%;
+    }
+    .eventmessage{
+        width: calc(100% - 80px);
+    float: left;
+    padding-left: 15px;
+    }
+    .eventmessage h4,
+    .eventmessage .h4{
+        font-size: 20px;
+    }
+    .ei_Copy,
+    .ei_Title
+    {
+        margin-left: 0
+    }
+}
+
+@media (max-width:992px) {
+    .container{
+        max-width: 100%;
+    }
+    .navbar{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    header .navbar-collapse .navbar-nav{
+   
+        font-size: 10px;
+    }
+    header .navbar-collapse .navbar-nav a{
+       
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center
+    }
+    .custom-media .profile-img{
+        width: 150px;
+        height: 150px;
+    }
+    .custom-media .profile-img img{
+        width: 100%
+    }
+    .custom-media .media-body{
+        padding-left: 20px;
+    }
+    .box{
+        height: auto;
+    }
+    .eventimage{
+        width: 80px;
+        margin-right: 0
+    }
+    .eventimage img{
+        width: 100%;
+    }
+    .eventmessage{
+        width: calc(100% - 80px);
+    float: left;
+    padding-left: 15px;
+    }
+    .eventmessage h4,
+    .eventmessage .h4{
+        font-size: 20px;
+    }
+    .ei_Copy,
+    .ei_Title
+    {
+        margin-left: 0
+    }
+}
+
+
+@media (max-width:767px) {
+    .navbar-brand img{
+        max-width: 130px;
+    }
+    .navbar-light .navbar-toggler{
+        border: none
+    }
+    .btn-header-grey{
+        display: block;
+        line-height: 20px;
+        height: 30px;
+    }
+    .w-sm-100{
+        width: 100%;
+        display: none
+    }
+    header .navbar-collapse .navbar-nav{
+        flex-direction: column;
+    }
+    .navbar-toggler:focus{
+        outline: none
+    }
+    .dropdown-menu{
+        position: static;
+        font-size: 12px;
+    }
+    .box{
+        height: auto;
+    }
+    .custom-media{
+        display: block;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .nav-link-top{
+        font-size: 0;
+        float: right
+    }
+    .top-social-link{
+        display: none;
+    }
+    .navbar-expand-md>.container, .navbar-expand-md>.container-fluid{
+        padding-left: 15px;
+    }
+    .footer .navbar-nav{
+       
+        flex-direction: column;
+        margin: 0 !important;
+        text-align: center;
+        display: flex;
+        width: 100%;
+    }
+    .footer .navbar-nav li{
+        border: none;
+        margin-bottom: 10px;
+    }
+    .eventimage{
+        width: 80px;
+        margin-right: 0
+    }
+    .eventimage img{
+        width: 100%;
+    }
+    .eventmessage{
+        width: calc(100% - 80px);
+    float: left;
+    padding-left: 15px;
+    }
+    .eventmessage h4,
+    .eventmessage .h4{
+        font-size: 20px;
+    }
+    .ei_Copy,
+    .ei_Title
+    {
+        margin-left: 0
+    }
+}

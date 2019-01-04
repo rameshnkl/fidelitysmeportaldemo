@@ -1,5 +1,5 @@
 
-
+ 
 var ctx = document.getElementById('myChart').getContext('2d');
 var now=new Date();
 now=new Date(now.getFullYear(), now.getMonth(), 0);

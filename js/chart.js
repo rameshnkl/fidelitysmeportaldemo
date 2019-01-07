@@ -1,5 +1,5 @@
 
- 
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var now=new Date();
 now=new Date(now.getFullYear(), now.getMonth(), 0);
@@ -38,16 +38,16 @@ var ctxxx = document.getElementById('myverticalChart');
 var myChart = new Chart(ctxxx, {
   type: 'bar',
   data: {
-    labels:["Current Account", "Saving Account", "Investment", "Borrowing", "Other Services", "Account Opening"],
+    labels:["Business Directory Services", "Business Registration", "Investment", "Toolkits ", "E-Learning"],
 
     datasets: [
       {
-        label: 'Actual',
+        label: 'Unique Visits ',
         data: [50,52,53,55,66,40],
         backgroundColor: '#C8EBAD',
       },
       {
-        label: 'Buy',
+        label: 'Sales ',
         data: [40,38,23,35,52,26],
         backgroundColor: '#FDCEA8',
       },

@@ -181,4 +181,16 @@ header .navbar-collapse .navbar-nav{
     {
         margin-left: 0
     }
+    .form-control.form-control-search{
+        width: inherit;
+        min-width: 100px;
+        max-width: 140px;
+    }
+}
+@media (max-width:349px) {
+    .form-control.form-control-search{
+        width: inherit;
+        min-width: 100px;
+        max-width: 100px;
+    }
 }

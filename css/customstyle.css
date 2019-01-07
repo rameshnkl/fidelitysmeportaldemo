@@ -693,7 +693,24 @@ a.nav-link-orange{
 }
 .page-section-home-content{
     height: 435px;
+
 }
-.sbh_widget{
+.form-control.form-control-search{
+
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0; 
+    border-width:0 0 1px 0; 
+    background: url('../images/search_icon.png') no-repeat right center;
+    height: 25px; 
+    width: 290px;
+    padding-right: 21px;
+}
+.form-control.form-control-search:focus{
+outline: none;
+
+box-shadow: none;
+}
+/*.sbh_widget{
 	z-index:1;	
-}
+}*/

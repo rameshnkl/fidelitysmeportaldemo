@@ -3,10 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>::FIDELITY BANK::</title>
+<title>FIDELITY BANK</title>
+ <link rel="icon" href="images/fav.png" type="image/png" sizes="32x32"> 
 <link href="css/bootstrap.min.css" rel="stylesheet" >
 <link href="css/customstyle.css" rel="stylesheet" >
 <link href="css/responsive.css" rel="stylesheet" media="screen">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".SearchResult").hide();
+	$("#homediv").show();
+	$('#txtSearch').keypress(function (e) {
+	 var key = e.which;
+
+	 if(key == 13)  // the enter key code
+	  {
+	  	 $(".SearchResult").hide();
+		 txt = $("#txtSearch").val().toLowerCase();
+		 if (txt == "personal") {
+			$("#searchresult1").show();
+		 }
+		 else if (txt == "plumbing") {
+			$("#searchresult2").show();
+		 }
+		 else if (txt == "computer") {
+			$("#searchresult3").show();
+		 }
+		 else {
+		    $("#searchresult4").show();
+			$("#noresult").text(txt);
+		 }
+		 
+	  }
+	});   
+  
+});
+</script>
 </head>
 <body class="d-flex flex-column ">
 <header>
@@ -25,11 +57,11 @@
     <div class="container"> <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
     
       <div class="ml-auto mr-auto">
-        <form>
-          <input type="text" class="form-control form-control-search">
-        </form>
+       
+          <input id="txtSearch" type="text" class="form-control form-control-search">
+        
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" herf="#"> <span class="navbar-toggler-icon"></span> </button>
       <div class="ml-md-auto w-sm-100"> <a href="#" > <img src="images/copyrightlogo.png"> </a> </div>
     </div>
   </nav>
@@ -53,7 +85,7 @@
   </div>
 </header>
 <main role="main" class="flex-shrink-0">
-  
+  <div id="homediv" class="SearchResult">
   <section class="page-section page-section-ourservices bg-grey_cover">
   <div class="container">
     <div class="jumbotron custom-jumbotron_cover ">
@@ -152,7 +184,296 @@ SME Portal is in place to handle your Marketing needs, our professional team wil
       </div>
     </div>
   </section>
- 
+  </div>
+  
+  
+	<div id="searchresult4" class="SearchResult">
+		  <div class="container custom-search mt-sm-4">
+		<h3 class="title-result">No results found for: <span class="text-navy" id="noresult">“Personal Care Products”</span> </h3>
+		<div class="hr-line-dashed"></div>
+		</div>
+	</div>
+	  
+	<div id="searchresult1" class="SearchResult">
+	  <div class="container custom-search mt-sm-4">
+		<h3 class="title-result">1,100 results found for: <span class="text-navy">“Personal Care Products”</span> </h3>
+		<div class="hr-line-dashed"></div>
+		<div class="row">
+		  <div class="col-sm-6">
+			<h3><a href="#">Cleaning Solutions Ltd. (CSL)</a></h3>
+			<p>Abeasi, Cape Coast</p>
+			<strong>Type of Business</strong>
+			<p><a href="#">Detergent Mfrs & Suppliers</a>, <a href="#">Personal Care Products</a>, <a href="#">Personal Care Products Mfrs & </a></p>
+		  </div>
+		  <div class="col-sm-3">
+			<div class="mb-sm-2"> <a href="http://www.cleaningsolutionsghana.com/" class="search-web"><span class="icon-contct icon-email"></span>http://www.cleaningsolutionsghana.com/</a> </div>
+			<div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0332 191980</a></div>
+			<div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 4854190, 020 8733382</a></div>
+		  </div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="row">
+		  <div class="col-sm-6">
+			<h3><a href="#">Mixline Ventures</a></h3>
+			<p>Swanlake Juntion, North Kaneshie, Accra</p>
+			<strong>Type of Business</strong>
+			<p><a href="#">Personal Care Products</a></p>
+		  </div>
+		  <div class="col-sm-3">
+			<div class="mb-sm-2"> <a href="https//www.www.mixlineventures.com" class="search-web"><span class="icon-contct icon-email"></span>http://www.mixlineventures.com/</a> </div>
+			<div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>027	 7880407</a></div>
+			<div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 4332768</a></div>
+		  </div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		 <div class="row">
+		  <div class="col-sm-6">
+			<h3><a href="#">Dreams Galore</a></h3>
+			<p>Achimota, Accra</p>
+			<strong>Type of Business</strong>
+			<p><a href="#">Personal Care Products</a>, <a href="#">Personal Care Products Mfrs & </a></p>
+		  </div>
+		  <div class="col-sm-3">
+			<div class="mb-sm-2"> <a href="http://www.dgaloevera.com/" class="search-web"><span class="icon-contct icon-email"></span>http://www.dgaloevera.com/</a> </div>
+			<div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>030 2413338</a></div>
+			<div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 4649349, 024 3612478</a></div>
+		  </div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		 <div class="row">
+		  <div class="col-sm-6">
+			<h3><a href="#">Reha Medical Supply Gh. Ltd.</a></h3>
+			<p>Sodja Hse. Agbawe Street, Osu, Accra</p>
+			<strong>Type of Business</strong>
+			<p><a href="#">Hospital & Laboratory Eqpt</a>, <a href="#">Personal Care Products</a>, <a href="#">Medical Eqpt & Supplies</a>, <a href="#">Pharmaceuticals Mfrs & Supplie</a>
+	</p>
+		  </div>
+		  <div class="col-sm-3">
+			<div class="mb-sm-2"> <a href="-" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+			<div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>044 4280 3965</a></div>
+			<div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>093603 63676</a></div>
+		  </div>
+		</div>
+	<div class="hr-line-dashed"></div>
+		 <div class="row">
+		  <div class="col-sm-6">
+			<h3><a href="#">Janalf Marketing</a></h3>
+			<p>Kaneshie, Zongo Junction, Accra</p>
+			<strong>Type of Business</strong>
+			<p><a href="#">Personal Care Products</a>
+	</p>
+		  </div>
+		  <div class="col-sm-3">
+			<div class="mb-sm-2"> <a href="-" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+			<div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>030 2306183</a></div>
+			<div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>030 2306113</a></div>
+		  </div>
+		</div>
+
+
+		<div class="hr-line-dashed"></div>
+	  </div>
+		<!-----------------Pagination--------------------->
+	  <div class="text-center mb-sm-4">
+						<div class="btn-group">
+						  <!-- <button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button> -->
+						  <button class="btn btn-white active">1</button>
+						  <button class="btn btn-white">2</button>
+						  <button class="btn btn-white">3</button>
+						  <button class="btn btn-white">4</button>
+						  <button class="btn btn-white">5</button>
+						  <!-- <button class="btn btn-white" type="button"><i class="fa fa-chevron-right"></i> </button> -->
+						</div>
+					  </div>
+	  <!-----------------Pagination end----------------->
+	  </div>  
+  
+  <div id="searchresult2" class="SearchResult">
+  <div class="container custom-search mt-sm-4">
+    <h3 class="title-result">550 results found for: <span class="text-navy">“Plumbing Materials”</span> </h3>
+    <div class="hr-line-dashed"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Home Builder's Choice</a></h3>
+        <p>UT Building, Arena, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Hardware Retailers</a>, <a href="#">Plumbing Materials</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="#" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0302 686357</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 4868737</a></div>
+      </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Samclean Water Technologies (SAMODAK)</a></h3>
+        <p>Near Arena Trotro Station, Arena, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Plumbing Materials</a>, <a href="#">Water Coolers & Dispensers</a>, <a href="#">Water Filter Systems</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="#" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>030 2686452, 030 2668303</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 4287557, 020 9554647</a></div>
+      </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+     <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Megadom Enterprise</a></h3>
+        <p>Opp. Bonenifie, Kaneshie, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Building Materials</a>, <a href="#">Ceramic Products</a>, <a href="#">Plumbing Materials</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="#" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>-</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>020 8477386</a></div>
+      </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+     <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Prestige Trust Ltd.</a></h3>
+        <p>Causeway Agbogba, North Legon, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Air Conditioning Eqpt & Servic</a>, <a href="#">Plumbing Materials</a>, <a href="#">Security Eqpt-Systems</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="-" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>-</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>054 6176909, 020 8119327</a></div>
+      </div>
+    </div>
+<div class="hr-line-dashed"></div>
+     <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Open Court</a></h3>
+        <p>Opp. Hansonic Hotel, Asoredaho-Dansoman, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Building Materials</a>, <a href="#">Plumbing Materials</a>
+</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="-" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0302 321925</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>020 8174048</a></div>
+      </div>
+    </div>
+
+
+    <div class="hr-line-dashed"></div>
+  </div>
+    <!-----------------Pagination--------------------->
+  <div class="text-center mb-sm-4">
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button> -->
+                      <button class="btn btn-white active">1</button>
+                      <button class="btn btn-white">2</button>
+                      <button class="btn btn-white">3</button>
+                      <button class="btn btn-white">4</button>
+                      <button class="btn btn-white">5</button>
+                      <!-- <button class="btn btn-white" type="button"><i class="fa fa-chevron-right"></i> </button> -->
+                    </div>
+                  </div>
+  <!-----------------Pagination end----------------->
+  </div>  
+  
+  <div id="searchresult3" class="SearchResult">
+  <div class="container custom-search mt-sm-4">
+    <h3 class="title-result">2,745 results found for: <span class="text-navy">“Computer Supplies”</span> </h3>
+    <div class="hr-line-dashed"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Habol Office Machinery & Technical Services</a></h3>
+        <p>Opp. Anansekrom, Palmwine Junction, La, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Computer Supplies</a>, <a href="#">Photocopiers</a>, <a href="#">Printing Consumables & Eqpt</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="#" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0302 774483</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>027 7548437, 024 6897689</a></div>
+      </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">House of Penny Creations</a></h3>
+        <p>Opp. Etherean Mission Church, Sakaman High Street, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Computer Accessories & Periphe</a>, <a href="#">Computer Supplies</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="#" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0302 311283</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 4622992, 024 8226083</a></div>
+      </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+     <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Socodim Computers & Electronics</a></h3>
+        <p>No. F842/1st Kuku Hill Street, Osu, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Computer Accessories & Periphe</a>, <a href="#">Computer Maintenance & Repairs</a>, <a href="#">Computer Services</a>, <a href="#">Computer Supplies</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="#" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0302 770892</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 3221594</a></div>
+      </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+     <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Intact International Gh. Ltd. (Head Office)</a></h3>
+        <p>Near St. Theressa School, North Kaneshie, Accra</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Computer Accessories & Periphe</a>, <a href="#">Computer Supplies</a>, <a href="#">Electronics</a></p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="http://www.intactint.com" class="search-web"><span class="icon-contct icon-email"></span>http://www.intactint.com</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>0302 228317</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 7742580, 024 3431111</a></div>
+      </div>
+    </div>
+<div class="hr-line-dashed"></div>
+     <div class="row">
+      <div class="col-sm-6">
+        <h3><a href="#">Fair Choice Computers</a></h3>
+        <p>Near Apewosika Basic School, Cape Coast</p>
+        <strong>Type of Business</strong>
+        <p><a href="#">Computer Supplies</a>
+</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="mb-sm-2"> <a href="-" class="search-web"><span class="icon-contct icon-email"></span>-</a> </div>
+        <div class="mb-sm-2 "> <a href="#" class="search-phone"><span class="icon-contct icon-phone"></span>020 8525899</a></div>
+        <div class="mb-sm-2 "><a href="#" class="search-lmobile"><span class="icon-contct icon-mobile"></span>024 3851727</a></div>
+      </div>
+    </div>
+
+
+    <div class="hr-line-dashed"></div>
+  </div>
+    <!-----------------Pagination--------------------->
+  <div class="text-center mb-sm-4">
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button> -->
+                      <button class="btn btn-white active">1</button>
+                      <button class="btn btn-white">2</button>
+                      <button class="btn btn-white">3</button>
+                      <button class="btn btn-white">4</button>
+                      <button class="btn btn-white">5</button>
+                      <!-- <button class="btn btn-white" type="button"><i class="fa fa-chevron-right"></i> </button> -->
+                    </div>
+                  </div>
+  <!-----------------Pagination end----------------->
+  </div>  
+  
 </main>
 <footer class="footer mt-auto py-3">
   <div class="container">
@@ -173,12 +494,11 @@ SME Portal is in place to handle your Marketing needs, our professional team wil
 
     <div id="example-widget-container">
     </div>
-    <script id="widget" src="https://bots-dev.smartbothub.com/9010/minifiedFiles/widget.js" botName="Fidelity Bank" botId="fidelitybank"
-    botIcon="https://bots-dev.smartbothub.com/9010/v1/api/fidelitybank/getImages?name=getImages_1.png"
-    botAvatar = "https://bots-dev.smartbothub.com/9010/v1/api/fidelitybank/getImages?name=icon.png"
-       secret="$2a$05$Odd6GELFnDEMB/NOCVEluuebQ276QIkbtWr0Cx2a.isbPNlMVLnMa" type="text/javascript">
+    <script id="widget" src="https://bots-dev.smartbothub.com/9009/minifiedFiles/widget.js" botName="Fidelity Bank" botId="fidelitybank"
+    botIcon="https://bots-dev.smartbothub.com/9009/v1/api/fidelitybank/getImages?name=getImages_1.png"
+    botAvatar = "https://bots-dev.smartbothub.com/9009/v1/api/fidelitybank/getImages?name=icon.png"
+       secret="$2a$05$Odd6GELFnDEMB/NOCVEluuebQ276QIkbtWr0Cx2a.isbPNlMVLnMa" autoLoad="true" type="text/javascript">
     </script>
-
 
 
 </body>

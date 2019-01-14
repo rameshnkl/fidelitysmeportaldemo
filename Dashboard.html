@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>::FIDELITY BANK::</title>
+	<title>FIDELITY BANK</title>
+ 	<link rel="icon" href="images/fav.png" type="image/png" sizes="32x32"> 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/customstyle.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet" media="screen">
@@ -148,7 +149,7 @@
 								<div class="progress-group">
 									<div class="progress-group-header align-items-end">
 										<i class="icon-globe progress-group-icon"></i>
-										<div>Place Holder 1</div>
+										<div>Assitance for Startups</div>
 										<div class="ml-auto font-weight-bold mr-2">640</div>
 										<div class="text-muted small">(64%)</div>
 									</div>
@@ -162,7 +163,7 @@
 								<div class="progress-group">
 									<div class="progress-group-header align-items-end">
 										<i class="icon-social-facebook progress-group-icon"></i>
-										<div>Place Holder 2</div>
+										<div>Merchant Services</div>
 										<div class="ml-auto font-weight-bold mr-2">312</div>
 										<div class="text-muted small">(31.2%)</div>
 									</div>
@@ -176,7 +177,7 @@
 								<div class="progress-group">
 									<div class="progress-group-header align-items-end">
 										<i class="icon-social-twitter progress-group-icon"></i>
-										<div>Place Holder 3</div>
+										<div>Working Capital Finance</div>
 										<div class="ml-auto font-weight-bold mr-2">460</div>
 										<div class="text-muted small">(46%)</div>
 									</div>
@@ -190,7 +191,7 @@
 								<div class="progress-group">
 									<div class="progress-group-header align-items-end">
 										<i class="icon-social-linkedin progress-group-icon"></i>
-										<div>Place Holder 4</div>
+										<div>Sales and Marketing</div>
 										<div class="ml-auto font-weight-bold mr-2">273</div>
 										<div class="text-muted small">(27.3%)</div>
 									</div>
@@ -212,15 +213,15 @@
 
 			<div class="col-md-6">
 				<div class="card">
-					<div class="card-header"> Event Calendars </div>
-					<div class="card-body">
+					<div class="card-header"> Ad Traffic </div>
+					<!--<div class="card-body">
 						<div class="row">
-							<div class="col-sm-12">
+							<div class="col-sm-12">-->
 								<!--<ul class="nav nav-tabs">
 												<li class="active" ><a data-toggle="tab" href="#UPEvents">Events</a></li>
 							     			</ul>-->
 
-								<div class="tab-content">
+								<!--<div class="tab-content">
 									<div id="UPEvents" class="tab-pane show fade in active">
 										<div class="event_item">
 											
@@ -258,8 +259,8 @@
 											</div>
 									</div>
 									
-								</div>
-
+								</div>-->
+								<div><canvas id="barChart" width="300" height="139"></canvas></div>
 							</div>
 						</div>
 					</div>
@@ -280,7 +281,102 @@
 
 
 	</div>
+    <!------Popup starts------------------>
+    <div class="modal fade" id="modal1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Details - <span class="date"></span></h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="accordion" id="categoryAccordion">
+							<div class="card">
+								<div class="card-header">
+									<button class="btn btn-link" id="bd" type="button" data-toggle="collapse" data-target="#collapseBD"
+									 aria-expanded="true" aria-controls="collapseOne">
+										Business Directories
+									</button>
+									<div class="btn float-right">Number of visits - <span id="bdVisit"></span></div>
+								</div>
+
+								<div id="collapseBD" class="collapse" aria-labelledby="bd" data-parent="#categoryAccordion">
+									<div class="card-body">
+										<div class="container">
+											<div class="row">
+												<div class="col-3 bg-light"></div>
+												<div class="col">
+													<strong>Description</strong>
+													<div class="desc">This is Business Directories</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<button class="btn btn-link" id="ad" type="button" data-toggle="collapse" data-target="#collapseAD"
+									 aria-expanded="true" aria-controls="collapseOne">
+										Business Ad Postings
+									</button>
+									<div class="btn float-right">Number of visits - <span id="adVisit"></span></div>
+								</div>
+
+								<div id="collapseAD" class="collapse" aria-labelledby="ad" data-parent="#categoryAccordion">
+									<div class="card-body">
+										<div class="container">
+											<div class="row">
+												<div class="col-3 bg-light"></div>
+												<div class="col">
+													<strong>Description</strong>
+													<div class="desc">This is Business Ad Postings</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<button class="btn btn-link" id="el" type="button" data-toggle="collapse" data-target="#collapseEL"
+									 aria-expanded="true" aria-controls="collapseOne">
+										E-Learning Center
+									</button>
+									<div class="btn float-right">Number of visits - <span id="elVisit"></span></div>
+
+
+								</div>
+
+								<div id="collapseEL" class="collapse" aria-labelledby="bd" data-parent="#categoryAccordion">
+									<div class="card-body">
+										<div class="container">
+											<div class="row">
+												<div class="col-3 bg-light"></div>
+												<div class="col">
+													<strong>Description</strong>
+													<div class="desc">This is E-Learning Center</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+      <!---Popup ends------------------->
 </main>
+
 	<footer class="footer mt-auto py-3">
 			<div class="container">
 			  <div class="navbar text-uppercase">
@@ -300,15 +396,14 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="js/chart.js"></script>
-
+<!--
     <div id="example-widget-container">
     </div>
-    <script id="widget" src="https://bots-dev.smartbothub.com/9010/minifiedFiles/widget.js" botName="Fidelity Bank" botId="fidelitybank"
-    botIcon="https://bots-dev.smartbothub.com/9010/v1/api/fidelitybank/getImages?name=getImages_1.png"
-    botAvatar = "https://bots-dev.smartbothub.com/9010/v1/api/fidelitybank/getImages?name=icon.png"
-       secret="$2a$05$Odd6GELFnDEMB/NOCVEluuebQ276QIkbtWr0Cx2a.isbPNlMVLnMa" type="text/javascript">
-    </script>
-
+    <script id="widget" src="https://bots-dev.smartbothub.com/9009/minifiedFiles/widget.js" botName="Fidelity Bank" botId="fidelitybank"
+    botIcon="https://bots-dev.smartbothub.com/9009/v1/api/fidelitybank/getImages?name=icon.png"
+    botAvatar = "https://bots-dev.smartbothub.com/9009/v1/api/fidelitybank/getImages?name=icon.png"
+       secret="$2a$05$Odd6GELFnDEMB/NOCVEluuebQ276QIkbtWr0Cx2a.isbPNlMVLnMa" autoLoad="true" type="text/javascript">
+    </script>-->
 
 </body>
 </html>

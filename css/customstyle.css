@@ -714,3 +714,24 @@ box-shadow: none;
 /*.sbh_widget{
 	z-index:1;	
 }*/
+
+/*---------------------Search starts----------------*/
+.custom-search h3, .custom-search a{
+	color:#f58426;
+	text-decoration:none;
+}
+.custom-search h3:hover, .custom-search a:hover{
+	text-decoration:underline;
+}
+/*---------------------Search ends----------------*/
+
+/*-----------------Chat starts-----------------------*/
+#example-widget-container .card.list.carousal-container.ng-scope {
+    border: 0;
+}
+
+.button.button-block.button-positive.button-small.carousal-button-borders.carousal-buttons.ng-binding.ng-scope {
+    color: #fff !important;
+    background-color: #f58426 !important;
+}
+/*-----------------Chat ends-----------------------*/

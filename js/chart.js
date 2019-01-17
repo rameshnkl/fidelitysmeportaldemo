@@ -30,52 +30,65 @@ var myChart = new Chart(ctx, {
   }
 });
 
-document.getElementById("myChart").onclick = function(e,item){
-    const activePoints = myChart.getElementsAtEvent(e);
-    if ( activePoints.length > 0) {
-      const ds=myChart.getDatasetAtEvent(e);
-      const index=ds[0]._datasetIndex;
-     const clickedElementIndex = activePoints[index]._index;
-     const label=myChart.data.labels[clickedElementIndex];
-     const bdvalue = myChart.data.datasets[0].data[clickedElementIndex];
-     const advalue = myChart.data.datasets[1].data[clickedElementIndex];
-     const elvalue = myChart.data.datasets[2].data[clickedElementIndex];
-     
-     $("#modal1 .date").text(`${label} ${now.toLocaleString("en-US", { month: "long" })}  ${now.getFullYear()}`);
-     $("#bdVisit").text(bdvalue);
-     $("#adVisit").text(advalue);
-     $("#elVisit").text(elvalue);
-     switch(index){
-       case 0 :$('#bd').click();break;
-       case 1 :$('#ad').click();break;
-       case 2 :$('#el').click();break;
-     }
-     
-     $("#modal1").modal('show');
+document.getElementById("myChart").onclick = function (e, item) {
+  const activePoints = myChart.getElementsAtEvent(e);
+  if (activePoints.length > 0) {
+    const ds = myChart.getDatasetAtEvent(e);
+    const index = ds[0]._datasetIndex;
+    const clickedElementIndex = activePoints[index]._index;
+    const label = myChart.data.labels[clickedElementIndex];
+    const bdvalue = myChart.data.datasets[0].data[clickedElementIndex];
+    const advalue = myChart.data.datasets[1].data[clickedElementIndex];
+    const elvalue = myChart.data.datasets[2].data[clickedElementIndex];
+
+    $("#modal1 .date").text(`${label} ${now.toLocaleString("en-US", { month: "long" })}  ${now.getFullYear()}`);
+    $("#bdVisit").text(bdvalue);
+    $("#adVisit").text(advalue);
+    $("#elVisit").text(elvalue);
+    switch (index) {
+      case 0: {
+        $('#collapseBD').addClass('show');
+        $('#collapseAD,#collapseEL').removeClass('show');
+        break;
+      }
+      case 1: {
+        $('#collapseAD').addClass('show');
+        $('#collapseBD,#collapseEL').removeClass('show');
+        break;
+      }
+      case 2: {
+        $('#collapseEL').addClass('show');
+        $('#collapseAD,#collapseBD').removeClass('show');
+        break;
+      }
+
     }
-  };
+
+    $("#modal1").modal('show');
+  }
+};
 
 var ctxxx = document.getElementById('barChart');
 
 var myChart2 = new Chart(ctxxx, {
   type: 'bar',
   data: {
-    labels:["Skyscraper", "Banner", "LeaderBoard","Square"],
+    labels: ["Skyscraper", "Banner", "LeaderBoard", "Square"],
 
     datasets: [
       {
         label: 'Views',
-        data: [9000,8000,7000,8000],
+        data: [9000, 8000, 7000, 8000],
         backgroundColor: '#66acde',
       },
       {
         label: 'Clicks',
-        data: [7000,7000,5000,5000],
+        data: [7000, 7000, 5000, 5000],
         backgroundColor: '#ffc166',
       },
       {
         label: 'Conversion',
-        data: [4500,4600,4200,6000],
+        data: [4500, 4600, 4200, 6000],
         backgroundColor: '#7eca8f',
       }
     ]
@@ -83,41 +96,42 @@ var myChart2 = new Chart(ctxxx, {
   },
   options: {
     scales: {
-      xAxes: [{ 
-        stacked: false ,
+      xAxes: [{
+        stacked: false,
         barPercentage: 0.9,
-        categoryPercentage: 0.4, 
-        gridLines: 
+        categoryPercentage: 0.4,
+        gridLines:
         {
-          display:false,
+          display: false,
           zeroLineWidth: 4,
         }
-       }],
-      yAxes: [{ 
-        stacked: false, 
+      }],
+      yAxes: [{
+        stacked: false,
         gridLines: {
-          display:false,
+          display: false,
           zeroLineWidth: 4,
         },
         ticks: {
           min: 0,
           max: 10000,
           stepSize: 2000,
-          beginAtZero:true,
-          callback: function(label, index, labels) {
-            return label/1000+'k';
+          beginAtZero: true,
+          callback: function (label, index, labels) {
+            return label / 1000 + 'k';
+          }
         }
-       }  }]
+      }]
     }
   }
-}); 
+});
 
 var ctxxx = document.getElementById('myverticalChart');
 
 var myChart1 = new Chart(ctxxx, {
   type: 'bar',
   data: {
-    labels:["Business Directory Services", "Business Registration", "Investment", "Toolkits ", "E-Learning"],
+    labels: ["Business Directory Services", "Business Registration", "Investment", "Toolkits ", "E-Learning"],
 
     datasets: [
       {

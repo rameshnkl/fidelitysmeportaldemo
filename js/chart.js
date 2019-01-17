@@ -31,10 +31,11 @@ var myChart = new Chart(ctx, {
 });
 
 document.getElementById("myChart").onclick = function(e,item){
-    const activePoints = myChart.getElementAtEvent(e);
+    const activePoints = myChart.getElementsAtEvent(e);
     if ( activePoints.length > 0) {
-      const index=activePoints[0]._datasetIndex;
-     const clickedElementIndex = activePoints[0]._index;
+      const ds=myChart.getDatasetAtEvent(e);
+      const index=ds[0]._datasetIndex;
+     const clickedElementIndex = activePoints[index]._index;
      const label=myChart.data.labels[clickedElementIndex];
      const bdvalue = myChart.data.datasets[0].data[clickedElementIndex];
      const advalue = myChart.data.datasets[1].data[clickedElementIndex];
@@ -56,7 +57,7 @@ document.getElementById("myChart").onclick = function(e,item){
 
 var ctxxx = document.getElementById('barChart');
 
-var myChart = new Chart(ctxxx, {
+var myChart2 = new Chart(ctxxx, {
   type: 'bar',
   data: {
     labels:["Skyscraper", "Banner", "LeaderBoard","Square"],

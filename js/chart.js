@@ -225,7 +225,6 @@ function generateTable(size,now) {
     var newDate=new Date(now);
     newDate.setHours(now.getHours()+ Math.random()*24);
     newDate.setMinutes(now.getMinutes()+Math.random()*60)
-    //var newDate=now;
     table += `<tr><td>${val}</td><td>${newDate.toLocaleString('en-US',options)}</td></tr>`;
   }
   table += "</table>";

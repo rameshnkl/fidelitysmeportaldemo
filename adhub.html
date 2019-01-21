@@ -13,6 +13,7 @@
                 //get the file name
                 var fileName = $(this).val();
                 //replace the "Choose a file" label
+		$("#lblvideofile").html(fileName);
                 $(this).next('.custom-file-label').html(fileName);
             })
 		
@@ -20,6 +21,7 @@
                 //get the file name
                 var fileName = $(this).val();
                 //replace the "Choose a file" label
+		$("#lblimagefile").html(fileName);
                 $(this).next('.custom-file-label').html(fileName);
             })		
 		
@@ -116,7 +118,7 @@
                       <td>
                       <div class="custom-file w-50">
 						<input type="file" name="video" class="custom-file-input " id="videofile">
-                          <label class="custom-file-label" for="videofile">Choose file</label>
+                          <label class="custom-file-label" for="videofile" id="lblvideofile">Choose file</label>
                         </div>				  
 					  </td>
                     </tr>
@@ -125,7 +127,7 @@
                       <td>
                       <div class="custom-file w-50">
 						<input type="file" name="image"  class="custom-file-input " id="imagefile">
-                          <label class="custom-file-label" for="imagefile">Choose file</label>	
+                          <label class="custom-file-label" for="imagefile" id="lblimagefile">Choose file</label>	
                         </div>			  
 					  </td>
                     </tr>

@@ -256,7 +256,7 @@ background-image: url('../images/icon-requiredDocument.png')
 }
 .text-advertise{
     font-size: 11px;
-    
+    border: 1px solid rgba(0,0,0,0.65);
     text-align: center;
    
 }
@@ -812,5 +812,10 @@ box-shadow: none;
 .custom-search .search-web, .custom-search .search-phone, .custom-search .search-lmobile {
     color: rgba(0,0,0,0.8);
 }
-
+.custom-file-label span{
+	max-width:50%;
+white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+	}
 /*---------------------Search ends----------------*/

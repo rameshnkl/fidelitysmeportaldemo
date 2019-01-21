@@ -1,6 +1,53 @@
 
 
 var ctx = document.getElementById('myChart').getContext('2d');
+var names = [
+  "Beatrice Emmanuel",
+  "Sandra Daneil",
+  "Al Lalji",
+  "Nigel Piling",
+  "Brad Rickman",
+  "Savitri Sarangi",
+  "Azhaguraja Krishnamoorthy",
+  "Ramesh Lingampalli",
+  "Ramesh Perumal",
+  "Apratim Vyas",
+  "Santosh Rai",
+  "Krishna Chaitanya",
+  "Balaji Thiruvengadanathan",
+  "Thanigaivel Elangovan",
+  "Vignesh Babu",
+  "Prem Kumar",
+  "Karthe Kanthimani",
+  "Barbara David",
+  "Linda Benjamin",
+  "Doris Joseph",
+  "Cecilia James",
+  "Maame Philip",
+  "Gifty Francis",
+  "Janet Bright",
+  "Rita Alhassan",
+  "Rose Henry",
+  "Wendy Maxwell",
+  "Tracy Collins",
+  "Christable Evans",
+  "Lisa William",
+  "Mohammed Josephine",
+  "Anita Joel",
+  "Sandy Owusu",
+  "Vida Clement",
+  "Ansar Nii",
+  "Mimi Osei",
+  "Tilly Augustine",
+  "Rosy Desmond",
+  "Bridget Rauf",
+  "Yvonne Theophilus",
+  "Ayeeshatu Kwame",
+  "Sadia Junior",
+  "Aisha Seidu",
+  "Cosyln Dominic",
+  "Thomisia Fringpong"
+]
 var now = new Date();
 now = new Date(now.getFullYear(), now.getMonth(), 0);
 var month = now.getDate();
@@ -40,11 +87,15 @@ document.getElementById("myChart").onclick = function (e, item) {
     const bdvalue = myChart.data.datasets[0].data[clickedElementIndex];
     const advalue = myChart.data.datasets[1].data[clickedElementIndex];
     const elvalue = myChart.data.datasets[2].data[clickedElementIndex];
-
+    const date=new Date(now.getFullYear(),now.getMonth(),label);
     $("#modal1 .date").text(`${label} ${now.toLocaleString("en-US", { month: "long" })}  ${now.getFullYear()}`);
     $("#bdVisit").text(bdvalue);
     $("#adVisit").text(advalue);
     $("#elVisit").text(elvalue);
+
+    $("#bdTable").html(generateTable(bdvalue,date));
+    $("#adTable").html(generateTable(advalue,date));
+    $("#elTable").html(generateTable(elvalue,date));
     switch (index) {
       case 0: {
         $('#collapseBD').addClass('show');
@@ -164,4 +215,19 @@ function randomDate(month, date) {
 }
 function randomNum(size, range) {
   return Array.from({ length: size }, () => Math.floor(10 + Math.random() * range));
+}
+function generateTable(size,now) {
+  var value = names.slice();
+  var table = "<table class='table table-striped'><thead class='thead-dark'><th>Full Name</th><th>Visited Time</th></thead>";
+  var options={weekday:'long',year:'numeric',month:'short',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric'}
+  for (var i = 0; i < size; i++) {
+    var val = value.splice(Math.floor(Math.random() * value.length), 1)[0];
+    var newDate=new Date(now);
+    newDate.setHours(now.getHours()+ Math.random()*24);
+    newDate.setMinutes(now.getMinutes()+Math.random()*60)
+    //var newDate=now;
+    table += `<tr><td>${val}</td><td>${newDate.toLocaleString('en-US',options)}</td></tr>`;
+  }
+  table += "</table>";
+  return table;
 }

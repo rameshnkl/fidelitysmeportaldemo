@@ -734,4 +734,83 @@ box-shadow: none;
     color: #fff !important;
     background-color: #f58426 !important;
 }
+
+#example-widget-container .sbh_widget .slick-next-button:hover+.next-span, .sbh_widget .slick-prev-button:hover+.prev-span{
+		    vertical-align: middle !important;
+	}
+	#example-widget-container .sbh_widget .slick-buttons{
+		margin-top:0 !important;}
+		
+		#example-widget-container .sbh_widget #msgContainer>div:last-child bots>.bot-card-container>.card.button-inline-card{
+			overflow:inherit !important;
+			}
+			#example-widget-container  .modal-dialog{
+				    pointer-events: auto; 
+				}
+			#example-widget-container	.sbh_widget .locationPopupButtons{
+					
+					width:auto;
+					min-width:85px;
+					}
+					#example-widget-container #chatContainer{
+						-webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+						-moz-box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+						box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+						}
 /*-----------------Chat ends-----------------------*/
+
+	.custom-control-input:checked~.custom-control-label::before{
+		    border-color: #f28329;
+    background-color: #f28329;
+	}
+	
+	
+	.icon-contct {
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.icon-email {
+	background-image: url(../images/icon-http.png)
+}
+.icon-mobile {
+	background-image: url(../images/icon-mobile.png)
+}
+.icon-phone {
+	background-image: url(../images/icon-phone.png)
+}
+
+/*---------------------Search starts----------------*/
+.custom-search h3, .custom-search a{
+	color:#f58426;
+	text-decoration:none;
+}
+.custom-search h3:hover, .custom-search a:hover{
+	text-decoration:underline;
+}
+.custom-search h3{
+    color: #f58426;
+	font-size:16px;
+    text-decoration: none;
+}
+
+
+.hr-line-dashed {
+    border-top: 1px dashed #e7eaec;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+}
+.text-navy {
+    color: #757575;
+}
+.custom-search .search-web, .custom-search .search-phone, .custom-search .search-lmobile {
+    color: rgba(0,0,0,0.8);
+}
+
+/*---------------------Search ends----------------*/

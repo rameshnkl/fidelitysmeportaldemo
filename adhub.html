@@ -7,27 +7,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" >
 <link href="css/customstyle.css" rel="stylesheet" >
 <link href="css/responsive.css" rel="stylesheet" media="screen">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            $('#videofile').on('change',function(){
-                //get the file name
-                var fileName = $(this).val();
-                //replace the "Choose a file" label
-		$("#lblvideofile").html(fileName);
-                $(this).next('.custom-file-label').html(fileName);
-            })
-		
-            $('#imagefile').on('change',function(){
-                //get the file name
-                var fileName = $(this).val();
-                //replace the "Choose a file" label
-		$("#lblimagefile").html(fileName);
-                $(this).next('.custom-file-label').html(fileName);
-            })		
-		
-        </script>	
-	
-	
 </head>
 <body class="d-flex flex-column ">
   <header>
@@ -93,7 +72,7 @@
                           </div>
                             <div class="custom-control custom-radio mr-sm-2"  >
 						  <input type="radio" name="page" value="search" id="radio-searchpage" class="custom-control-input">
-                            <label class="custom-control-label" for="radio-searchpage">Search Page</label>
+                            <label class="custom-control-label" for="radio-searchpage"><span>Search Page</span></label>
                           </div>
                           </div>			  
 					  </td>
@@ -118,16 +97,17 @@
                       <td>
                       <div class="custom-file w-50">
 						<input type="file" name="video" class="custom-file-input " id="videofile">
-                          <label class="custom-file-label" for="videofile" id="lblvideofile">Choose file</label>
+                          <label class="custom-file-label" for="videofile">
+                          <span>Choose file</span></label>
                         </div>				  
 					  </td>
                     </tr>
                     <tr>
-                      <td>Image file: (380 x 104 in pixel & ratio)</td>
+                      <td>Image file: (380 x 104 in pixel & radio)</td>
                       <td>
                       <div class="custom-file w-50">
-						<input type="file" name="image"  class="custom-file-input " id="imagefile">
-                          <label class="custom-file-label" for="imagefile" id="lblimagefile">Choose file</label>	
+						<input type="file" name="image"  class="custom-file-input " id="custom">
+                          <label class="custom-file-label" for="imageFile">Choose file</label>	
                         </div>			  
 					  </td>
                     </tr>
@@ -165,6 +145,15 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
+		$("input[type=file]").change(function () {
+  		  var fieldVal = $(this).val();
+ 		  fieldVal = fieldVal.replace("C:\\fakepath\\", "");
+  			if (fieldVal != undefined || fieldVal != "") {
+    			$(this).next(".custom-file-label").attr('data-content', fieldVal);
+   				 $(this).next(".custom-file-label").text(fieldVal);
+  }
+
+});
     });
   </script>
   

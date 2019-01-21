@@ -64,39 +64,57 @@
                     <tr>
                       <td>Page</td>
                       <td>
-						  <input type="radio" name="page" value="home" checked>Home Page<br>
-						  <input type="radio" name="page" value="search">Search Page<br>					  
+                      <div class="form-inline">
+                        <div class="custom-control custom-radio mr-sm-2">
+						  <input type="radio" name="page" value="home" checked id="radio-homepage"  class="custom-control-input">
+                          <label class="custom-control-label" for="radio-homepage"> Home Page</label>
+                         
+                          </div>
+                            <div class="custom-control custom-radio mr-sm-2"  >
+						  <input type="radio" name="page" value="search" id="radio-searchpage" class="custom-control-input">
+                            <label class="custom-control-label" for="radio-searchpage">Search Page</label>
+                          </div>
+                          </div>			  
 					  </td>
                     </tr>
                     <tr>
                       <td>Business Name:</td>
                       <td>
-						<input type="text" name="businessname" value=""><br>				  
+						<input type="text" name="businessname" value="" class="form-control w-50"> 			  
 					  </td>
                     </tr>
                     <tr>
                       <td>Keywords</td>
                       <td>
-							<input type="text" name="keywords" value=""><br>				  
+                      
+                     
+							<input type="text" name="keywords" value="" class="form-control w-50">
+                          	  
 					  </td>
                     </tr>
                     <tr>
-                      <td>Video file: (400 x 100)</td>
+                      <td>Video file: (max: 1920 x 1080)</td>
                       <td>
-						<input type="file" name="video"> <br>					  
+                      <div class="custom-file w-50">
+						<input type="file" name="video" class="custom-file-input " id="videofile">
+                          <label class="custom-file-label" for="videofile">Choose file</label>
+                        </div>				  
 					  </td>
                     </tr>
                     <tr>
-                      <td>Image file: (400 x 100)</td>
+                      <td>Image file: (380 x 104 in pixel & ratio)</td>
                       <td>
-						<input type="file" name="image">				  
+                      <div class="custom-file w-50">
+						<input type="file" name="image"  class="custom-file-input " id="custom">
+                          <label class="custom-file-label" for="imageFile">Choose file</label>	
+                        </div>			  
 					  </td>
                     </tr>
 
                     <tr>
                       <td></td>
                       <td>
-						<input type="submit" value="Upload">
+						<input type="submit" value="Upload" class="btn btn-primary float-left">
 					  </td>
                     </tr>					
 					

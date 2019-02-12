@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>::FIDELITY BANK:: | AdHub</title>
+<title>::FIDELITY BANK:: | E-Learning</title>
 <link href="css/bootstrap.min.css" rel="stylesheet" >
 <link href="css/customstyle.css" rel="stylesheet" >
 <link href="css/responsive.css" rel="stylesheet" media="screen">
@@ -22,7 +22,7 @@
       </div>
     </div>
     <nav class="navbar navbar-expand-md navbar-light">
-    <div class="container"> <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+    <div class="container"> <a class="navbar-brand" href="index.html?video=creative.mp4&image=creative.png"><img src="images/logo.png"></a>
     
       <div class="ml-auto mr-auto">
         <form>
@@ -45,10 +45,12 @@
               <a class="dropdown-item" href="genenral-requirements.html">General Requirements </a> 
               </div>
             </li>
-          <li class="nav-item"> <a class="nav-link" href="elearning.html">E-Learning Hub / Learning Hub </a> </li>
+			
+          <li class="nav-item active"> <a class="nav-link" href="elearning.html">E-Learning Hub / Learning Hub </a> </li>
           <li class="nav-item"> <a class="nav-link" href="businessdirectory.html">Business Directory </a> </li>
-          <li class="nav-item active"> <a class="nav-link" href="adhub.html">Advertising Hub </a></li>
+          <li class="nav-item"> <a class="nav-link" href="adhub.html">Advertising Hub </a></li>
           <li class="nav-item"> <a class="nav-link" href="resourcecenter.html">Resource Center</a></li>
+			
             <li class="nav-item">  <a class="nav-link nav-link-orange" href="Dashboard.html"><span class="icon-login"></span> Admin / Login</a></li>
           </ul>
         </div>
@@ -57,77 +59,9 @@
   </header>
 <main role="main" class="flex-shrink-0">
   <div class="container">
-        <h5 class="mt-3">Ad Upload</h5>
-		
-		<form action="./index.html">		
-		
-		<div class="table-wrapper">
-			<table class="table table-striped table-hover">
-                <tbody>
-                    <tr>
-                      <td>Page</td>
-                      <td>
-                      <div class="form-inline">
-                        <div class="custom-control custom-radio mr-sm-2">
-						  <input type="radio" name="page" value="home" checked id="radio-homepage"  class="custom-control-input">
-                          <label class="custom-control-label" for="radio-homepage"> Home Page</label>
-                         
-                          </div>
-                            <div class="custom-control custom-radio mr-sm-2"  >
-						  <input type="radio" name="page" value="search" id="radio-searchpage" class="custom-control-input">
-                            <label class="custom-control-label" for="radio-searchpage"><span>Search Page</span></label>
-                          </div>
-                          </div>			  
-					  </td>
-                    </tr>
-                    <tr>
-                      <td>Business Name:</td>
-                      <td>
-						<input type="text" name="businessname" value="" class="form-control w-50"> 			  
-					  </td>
-                    </tr>
-                    <tr>
-                      <td>Keywords</td>
-                      <td>
-                      
-                     
-							<input type="text" name="keywords" value="" class="form-control w-50">
-                          	  
-					  </td>
-                    </tr>
-                    <tr>
-                      <td>Video file: (max: 1920 x 1080)</td>
-                      <td>
-                      <div class="custom-file w-50">
-						<input type="file" name="video" class="custom-file-input " id="videofile">
-                          <label class="custom-file-label" for="videofile">
-                          <span>Choose file</span></label>
-                        </div>				  
-					  </td>
-                    </tr>
-                    <tr>
-                      <td>Image file: (380 x 104 in pixel & radio)</td>
-                      <td>
-                      <div class="custom-file w-50">
-						<input type="file" name="image"  class="custom-file-input " id="custom">
-                          <label class="custom-file-label" for="imageFile">Choose file</label>	
-                        </div>			  
-					  </td>
-                    </tr>
+          <h5 class="mt-3">E-Learning Hub</h5>
 
-                    <tr>
-                      <td></td>
-                      <td>
-						<input type="submit" value="Upload" class="btn btn-primary float-left">
-					  </td>
-                    </tr>					
-					
-					</tbody>
-			</table>
-		</div>
-		
-		</form>		
-				
+        <img src="images/page-under-construction.png">
   </div>
 </main>
 <footer class="footer mt-auto py-3">
@@ -148,15 +82,6 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
-		$("input[type=file]").change(function () {
-  		  var fieldVal = $(this).val();
- 		  fieldVal = fieldVal.replace("C:\\fakepath\\", "");
-  			if (fieldVal != undefined || fieldVal != "") {
-    			$(this).next(".custom-file-label").attr('data-content', fieldVal);
-   				 $(this).next(".custom-file-label").text(fieldVal);
-  }
-
-});
     });
   </script>
   
